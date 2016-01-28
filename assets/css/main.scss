@@ -1,16 +1,6 @@
 @import "0-tools/bourbon/bourbon";
 @import "0-tools/normalize";
-
 @import "1-base/_base";
 @import "1-base/_vars";
-
-
-// @import "syntax";
-
-body {
-    background: white;
-};
-
-h1 {
-    color: $bg-color;
-}
+@import "2-modules/_header";
+@import "3-layouts/_main";
