@@ -1,6 +1,11 @@
-@import "0-tools/bourbon/bourbon";
 @import "0-tools/normalize";
+@import "0-tools/bourbon/bourbon";
+@import "0-tools/fonts";
+
+@import "1-base/_classes";
 @import "1-base/_base";
 @import "1-base/_vars";
+
 @import "2-modules/_header";
+
 @import "3-layouts/_main";

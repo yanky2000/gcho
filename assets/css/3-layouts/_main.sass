@@ -1,25 +1,16 @@
-.col-1
-  width: 320px
-
-
-.front-banner
-  display: flex
-  height: 475px
-
-  .container
-    width: 100%
-    background:
-      margin-left: 15%
+section.home-banner
+  .flex
+    padding: 5px 25px
+    background: pink
       image: url(/assets/img/front-banner1.png)
-      position: 460px
       size: contain
       repeat: no-repeat
+      position: 20%
 
     .bubble
-      position: relativeo
+      // position: relative
       box-sizing: border-box
-      float: right
-      margin-right: 30%
+      margin-left: 30%
       border-radius: 50%
       width: 450px
       height: 450px
@@ -27,31 +18,29 @@
       background: #f1f1f1
 
       .content
-        // position: fixed
+        margin: 40px 50px 60px 60px
         display: flex
         flex-direction: column
-        margin: 40px 50px 60px 60px
-        box-sizing: border-box
         justify-content: center
         width: 350px
         // background-color: green
 
-
         h1
           padding-left: 20px
-          font-size: 36px
-
-        .hr
-          height: 2px
-          border: 1px
-          background-color: $fgrey
+          font-size: 32px
+          color: #272727
+          // background-color: pink
+          padding-bottom: 20px
+          margin-bottom: 0
+          border-bottom: 2px solid $fgrey
 
         h2
-          font-size: 22px
+          font-size: 20px
           color: $fblue
 
         p
           margin: 0 0 24px 0
+          //color: #353535
 
         button
           align-self: center
@@ -62,57 +51,101 @@
           background-color: $fblue
 
 
-.services-container
-  // width: 100%
-  display: flex
-  flex-direction: row
-  padding: 40px 0
+section.services
   background-color: #f9f9f9
 
   .services-list
-    width: 40%
-    margin-right: 70px
+    margin: 5px 70px 5px 0
     border-right: 4px solid $fgrey
     ul
-      font-size: 18px
       padding-right: 25px
-      line-height: 30px
+      line-height: 2em
       list-style-type: none
       text-align: right
       color: #8e8b8b
 
-
   .service-banner
-    width: 60%
+    margin: 40px 0
     background:
       image: url(/assets/img/look.jpg)
       size: contain
       repeat: no-repeat
-      // position: 150px
-      margin-left: 50px
 
-.container-welcome
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  padding: 60px 0
-  justify-content: center
-
-
-  .doctor-face
-    min-width: 200px
-    background: pink
-      image: url(/assets/img/docface.jpg)
+section.doctor
+    background:
+      image: url(/assets/img/moscow2.jpg)
+      size: 100%
+      position: 0 -140px
       repeat: no-repeat
-      position: center
 
-  .welcome-msg-wrap
-    width: 75%
-    margin-left: 50px
-
-    .welcome-msg-content
-      width: 80%
-      // margin: 0 225px
-      border-radius: 0 35px 35px 35px
+    .col-1
+      margin: 80px 25px
+      // min-width: 180px
+      width: 180px
+      height: 180px
+      border-radius: 50%
       background:
-        color: green
+        image: url(/assets/img/docface.jpg)
+        repeat: no-repeat
+        position: center
+
+    .doctor_msgbox
+      display: block
+      margin: 40px 0
+      margin-left: 50px
+      max-width: 50%
+
+      .doctor_msgbox_content
+        text-indent: 20px
+        padding: 35px 40px
+        border-radius: 5px 40px 40px 5px
+        background:
+          color: rgba(255, 255, 255, 0.7)
+
+
+        .doctor_msgbox_content_signature-box
+          text-align: right
+          background:
+            image: url(/assets/img/sign2.jpg)
+            size: contain
+            max-width: 120px
+            repeat: no-repeat
+            position: right
+
+          h4, p
+            margin: 0 120px 0 0
+
+          // @media (max-width: 953px)
+          //   h4
+          //     font-size: 12px
+
+
+
+section.testimonials
+  padding: 25px 0
+  background: #8bb0d9
+    image: url(/assets/img/bg-testimonials.jpg)
+    size: contain
+    position: center top
+    repeat: no-repeat
+
+  .col-75
+    width: 100%
+  .flex
+    // height: 250px
+    // background-color: rgb(131, 170, 132)
+    .col-1
+      // display: flex
+      // margin:
+      button
+        // display: flex
+        background: #edf1f4
+        color: #9fa5aa
+
+
+
+
+@media (max-width: 770px) {}
+
+section.form
+  height: 700px
