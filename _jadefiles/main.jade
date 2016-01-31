@@ -45,23 +45,54 @@ section.doctor
           p кмн, врач высшей категории
 
 section.testimonials
-  .flex
+  .flex.space--center
     .col-75
       ul.bxslider
-        li 
-          div Отличный доктор. Спасибо большое!
-        li 
-          div Особое внимание на детали и хорошее отношение!
-        li 
-          div Буду теперь делать только у Вас!!!!
+        li Отличный доктор. Спасибо большое! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          br
+          cite.push-right - Елена Белякова, Москва
+        li Особое внимание на детали и хорошее отношение! sdam repellat soluta velit iusto, eveniet perspiciatis voluptas dolor, inventore in aliquam possimus deleniti aperiam officia!
+          br
+          cite.push-right Ольга В., Москва
+        li Буду теперь делать только у Вас!!!! alias culpa quo reiciendis explicabo nemo voluptatem commodi aliquam esse, illo eligendi aut nesciunt et. Consectetur.
+          br
+          cite.push-right - Зоя К.
       
     .col-1
-      button читать еще
+      button еще отзывы...
   
-section.form
-  .col-50
-    .col-1.form-content
+section.feedback
+  .flex.space--around
+    .form-wrap
+    
+      //thankyou_message**
+      #thankyou_message(style='display:none;')
+        h5 Ваше сообщение отправлено! Мы свяжемся с Вами в самое ближайщее время!
       
-  .col-50
-    .col-1.map
+      form#gform.pure-form.pure-form-stacked(method='POST', action='https://script.google.com/macros/s/AKfycbzk5fhlhYR0nIG9mEMjWeldvqkH4tMJo3IRNsUhhzbOelteRcmQ/exec')
+      
+        .form-group
+          .row
+            label(for='name')
+            input#name.form-control(name='name', placeholder='* Имя')
+          
+            label(for='tel')
+            input#tel.form-control(name='phoneNo', placeholder='Телефон')
+          
+          .row
+            label(for='email')
+            input#email.form-control(name='email', type='email', value='', required='', placeholder='* Эл.почта')
+            span#email-invalid(style='visibility:hidden')
+              | Ваш адрес эл.почты
+          
+          .row
+            label(for='message')
+            textarea#message.form-control(name='message', rows='5', placeholder='* Ваш вопрос / сообщение')
+          
+        button.btn.btn-default(type='submit') Отправить
+      
+      
+      
+    .col-50
+      .col-1.map
     

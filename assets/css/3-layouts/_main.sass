@@ -44,12 +44,10 @@ section.home-banner
 
         button
           align-self: center
-          background-color: red
           width: 50%
           padding: 0
           color: white
           background-color: $fblue
-
 
 section.services
   background-color: #f9f9f9
@@ -119,33 +117,91 @@ section.doctor
           //   h4
           //     font-size: 12px
 
-
-
 section.testimonials
-  padding: 25px 0
+  // padding: 25px 0
   background: #8bb0d9
     image: url(/assets/img/bg-testimonials.jpg)
-    size: contain
-    position: center top
+    size: cover
+    position: left center
     repeat: no-repeat
+  color: white
 
-  .col-75
-    width: 100%
+
+    // width: 100%
+
   .flex
     // height: 250px
     // background-color: rgb(131, 170, 132)
+    .col-75
+      padding: 0 100px
+      width: 50%
+      font-size: 16px
+
+      .bx-wrapper
+        .bx-viewport
+          height: auto !important
+          // margin: auto 35px
+
     .col-1
       // display: flex
       // margin:
+      margin: auto 0
       button
         // display: flex
+        margin: auto
         background: #edf1f4
         color: #9fa5aa
 
+section.feedback
+  background-color: #c7c7c7
+  height: 450px
+
+  .flex
+    padding: 20px
+
+    .form-wrap
+      margin: auto 25px
+      form
+        padding: 25px
+        // max-width: 600px
+        background-color: #dcdcdc
+
+        .form-group
+          // margin: 35px auto
+          // background-color: #dcdcdc
+
+          .row
+            margin-bottom: 15px
+            .form-control
+              color: rgb(40, 40, 40)
+
+            input
+              min-width: 200px
+              height: 30px
+              box-sizing: border-box
+              border-style: none
+
+            #name, #email
+              margin-right: 15px
+            .form-control
+              background-color: $med-blue
+
+            ::-webkit-input-placeholder
+              /* Chrome/Opera/Safari */
+              color: white
+
+            ::-moz-placeholder
+              color: white
+
+            :-ms-input-placeholder
+              color: white
+
+            :-moz-placeholder
+              color: white
 
 
-
+    .col-50
+      width: 350px
+      height: 350px
+      background-color: red
 @media (max-width: 770px) {}
-
-section.form
-  height: 700px

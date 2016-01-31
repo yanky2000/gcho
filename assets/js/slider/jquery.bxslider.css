@@ -16,7 +16,7 @@
 
 .bx-wrapper {
 	position: relative;
-	margin: 0 auto 60px;
+	margin: 20px auto 40px;
 	padding: 0;
 	*zoom: 1;
 }
@@ -84,7 +84,7 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
+	background: #c5d8ec;
 	text-indent: -9999px;
 	display: block;
 	width: 10px;
@@ -98,7 +98,7 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: white;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
