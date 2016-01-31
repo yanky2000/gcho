@@ -1,14 +1,17 @@
+mixin nav-content ()
+  ul
+    li: a(href="about") О хирурге
+    li: a(href="services") Услуги
+    li: a(href="fotogallery") Фотогалерея
+    li: a(href="faq") Вопрос/Ответ
+    li: a(href="contacts") Контакты
+
 header
   .header-top
     .logo 
 
     nav
-      ul
-        li: a(href="about") О хирурге
-        li: a(href="services") Услуги
-        li: a(href="fotogallery") Фотогалерея
-        li: a(href="faq") Вопрос/Ответ
-        li: a(href="contacts") Контакты
+      +nav-content()
 
   .header-bottom
     .header-title

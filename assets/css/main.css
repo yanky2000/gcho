@@ -559,13 +559,25 @@ header .header-bottom {
       font-size: 24px;
       color: #92b4db; }
 
+footer .flex {
+  padding: 25px 20px 50px 20px;
+  color: black;
+  background-color: #525252; }
+  footer .flex .footer-title {
+    border-bottom: 2px solid #323232; }
+  footer .flex .col-50 .col-1 ul {
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: 16px; }
+  footer .flex .col-1 {
+    font-size: 28px; }
+
 section.home-banner .flex {
   padding: 5px 25px;
-  background: pink;
-    background-image: url(/assets/img/front-banner1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 20%; }
+  background-image: url(/assets/img/front-banner1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20%; }
   section.home-banner .flex .bubble {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -615,12 +627,14 @@ section.home-banner .flex {
 
 section.services {
   background-color: #f9f9f9; }
+  section.services .flex {
+    padding: 25px; }
   section.services .services-list {
     margin: 5px 70px 5px 0;
-    border-right: 4px solid #d0d0d0; }
+    border-right: 2px solid #d0d0d0; }
     section.services .services-list ul {
-      padding-right: 25px;
-      line-height: 2em;
+      padding-right: 30px;
+      line-height: 2.2em;
       list-style-type: none;
       text-align: right;
       color: #8e8b8b; }
@@ -646,12 +660,12 @@ section.doctor {
     background-position: center; }
   section.doctor .doctor_msgbox {
     display: block;
-    margin: 40px 0;
+    margin: 60px 0;
     margin-left: 50px;
     max-width: 50%; }
     section.doctor .doctor_msgbox .doctor_msgbox_content {
       text-indent: 20px;
-      padding: 35px 40px;
+      padding: 20px 40px;
       -webkit-border-radius: 5px 40px 40px 5px;
               border-radius: 5px 40px 40px 5px;
       background-color: rgba(255, 255, 255, 0.7); }
@@ -674,8 +688,7 @@ section.testimonials {
   color: white; }
   section.testimonials .flex .col-75 {
     padding: 0 100px;
-    width: 50%;
-    font-size: 16px; }
+    width: 50%; }
     section.testimonials .flex .col-75 .bx-wrapper .bx-viewport {
       height: auto !important; }
   section.testimonials .flex .col-1 {
@@ -686,39 +699,48 @@ section.testimonials {
       color: #9fa5aa; }
 
 section.feedback {
-  background-color: #c7c7c7;
-  height: 450px; }
+  background-color: #c7c7c7; }
   section.feedback .flex {
     padding: 20px; }
     section.feedback .flex .form-wrap {
-      margin: auto 25px; }
+      margin: auto 25px;
+      background-color: #dcdcdc; }
       section.feedback .flex .form-wrap form {
-        padding: 25px;
-        background-color: #dcdcdc; }
-        section.feedback .flex .form-wrap form .form-group .row {
-          margin-bottom: 15px; }
-          section.feedback .flex .form-wrap form .form-group .row .form-control {
-            color: #282828; }
-          section.feedback .flex .form-wrap form .form-group .row input {
-            min-width: 200px;
-            height: 30px;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            border-style: none; }
-          section.feedback .flex .form-wrap form .form-group .row #name, section.feedback .flex .form-wrap form .form-group .row #email {
-            margin-right: 15px; }
-          section.feedback .flex .form-wrap form .form-group .row .form-control {
-            background-color: #8bb0d9; }
-          section.feedback .flex .form-wrap form .form-group .row ::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            color: white; }
-          section.feedback .flex .form-wrap form .form-group .row ::-moz-placeholder {
-            color: white; }
-          section.feedback .flex .form-wrap form .form-group .row :-ms-input-placeholder {
-            color: white; }
-          section.feedback .flex .form-wrap form .form-group .row :-moz-placeholder {
-            color: white; }
-    section.feedback .flex .col-50 {
-      width: 350px;
-      height: 350px;
-      background-color: red; }
+        padding: 25px; }
+        section.feedback .flex .form-wrap form .form-group .row .form-control {
+          min-width: 200px;
+          min-height: 30px;
+          width: 100%;
+          margin-bottom: 15px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          border-style: none;
+          color: #282828;
+          text-indent: 10px;
+          background-color: #8bb0d9; }
+        section.feedback .flex .form-wrap form .form-group .row #name, section.feedback .flex .form-wrap form .form-group .row #email {
+          margin-right: 15px; }
+        section.feedback .flex .form-wrap form .form-group .row ::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: white; }
+        section.feedback .flex .form-wrap form .form-group .row ::-moz-placeholder {
+          color: white; }
+        section.feedback .flex .form-wrap form .form-group .row :-ms-input-placeholder {
+          color: white; }
+        section.feedback .flex .form-wrap form .form-group .row :-moz-placeholder {
+          color: white; }
+        section.feedback .flex .form-wrap form button {
+          float: right;
+          margin-bottom: 25px; }
+    section.feedback .flex .col-50 .row h4 {
+      margin: 0 auto 15px;
+      text-indent: 25px; }
+    section.feedback .flex .col-50 .row p {
+      margin: 1em; }
+    section.feedback .flex .col-50 #map {
+      max-width: 600px;
+      height: 300px;
+      border: 2px solid #919191;
+      background-image: url(/assets/img/map2.png);
+      background-size: caption;
+      background-position: center; }

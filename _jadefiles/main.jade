@@ -63,7 +63,7 @@ section.testimonials
   
 section.feedback
   .flex.space--around
-    .form-wrap
+    .form-wrap.space--center
     
       //thankyou_message**
       #thankyou_message(style='display:none;')
@@ -74,25 +74,77 @@ section.feedback
         .form-group
           .row
             label(for='name')
-            input#name.form-control(name='name', placeholder='* Имя')
+            input#name.form-control(name='name', placeholder='*Имя')
           
             label(for='tel')
             input#tel.form-control(name='phoneNo', placeholder='Телефон')
           
           .row
             label(for='email')
-            input#email.form-control(name='email', type='email', value='', required='', placeholder='* Эл.почта')
+            input#email.form-control(name='email', type='email', value='', required='', placeholder='*Эл.почта')
             span#email-invalid(style='visibility:hidden')
               | Ваш адрес эл.почты
           
           .row
             label(for='message')
-            textarea#message.form-control(name='message', rows='5', placeholder='* Ваш вопрос / сообщение')
+            textarea#message.form-control(name='message', rows='5', placeholder='*Ваш вопрос / сообщение')
           
         button.btn.btn-default(type='submit') Отправить
       
       
       
     .col-50
-      .col-1.map
-    
+      .row
+        h4 Очные консультации
+          
+      #map
+      
+      .row
+        p 
+          | Клиника "Союз"
+          br
+          |+7(499) 995-12-99
+          br
+          |Москва, м.Сокольники ул.Матросская Тишина, д.14а
+      
+        //- p 
+        //- p +7(499) 995-12-99
+        //- p Москва, м.Сокольники ул.Матросская Тишина, д.14а
+        
+      //- script
+      //-   function initMap() {
+      //-     var mapDiv = document.getElementById('map');
+      //-     var map = new google.maps.Map(mapDiv, {center: {lat: 44.540, lng: -78.546},zoom: 8});
+      //- }
+      //- script(src='https://maps.googleapis.com/maps/api/js?callback=initMap', async='', defer='')
+      //- 
+      
+      //working google maps
+//- script.
+//-   function initMap() {
+//-   var mapDiv = document.getElementById('map');
+//-   var map = new google.maps.Map(mapDiv, {
+//-   center: {lat: 44.540, lng: -78.546},
+//-   zoom: 8
+//-   });
+//-   }
+//- script(src='https://maps.googleapis.com/maps/api/js?callback=initMap', async='', defer='')
+
+
+//Yandex Maps***
+//- script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+//- script(type='text/javascript').
+//-   ymaps.ready(init);
+//-   var myMap,
+//-   myPlacemark;
+//-   function init(){
+//-   myMap = new ymaps.Map("map", {
+//-   center: [55.789444,37.695502],
+//-   zoom: 15
+//-   });
+//-   myPlacemark = new ymaps.Placemark([55.789444,37.695502], {
+//-   hintContent: 'Клиника "Союз"',
+//-   balloonContent: 'Клиника "Союз". м. Сокольники ул. Матросская Тишина, д. 14А'
+//-   });
+//-   myMap.geoObjects.add(myPlacemark);
+//-   }

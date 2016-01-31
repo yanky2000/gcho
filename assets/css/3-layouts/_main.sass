@@ -1,7 +1,7 @@
 section.home-banner
   .flex
     padding: 5px 25px
-    background: pink
+    background:
       image: url(/assets/img/front-banner1.png)
       size: contain
       repeat: no-repeat
@@ -52,12 +52,16 @@ section.home-banner
 section.services
   background-color: #f9f9f9
 
+  .flex
+    padding: 25px
+    // box-sizing: border-box
+
   .services-list
     margin: 5px 70px 5px 0
-    border-right: 4px solid $fgrey
+    border-right: 2px solid $fgrey
     ul
-      padding-right: 25px
-      line-height: 2em
+      padding-right: 30px
+      line-height: 2.2em
       list-style-type: none
       text-align: right
       color: #8e8b8b
@@ -89,13 +93,13 @@ section.doctor
 
     .doctor_msgbox
       display: block
-      margin: 40px 0
+      margin: 60px 0
       margin-left: 50px
       max-width: 50%
 
       .doctor_msgbox_content
         text-indent: 20px
-        padding: 35px 40px
+        padding: 20px 40px
         border-radius: 5px 40px 40px 5px
         background:
           color: rgba(255, 255, 255, 0.7)
@@ -112,6 +116,7 @@ section.doctor
 
           h4, p
             margin: 0 120px 0 0
+            text-indent:
 
           // @media (max-width: 953px)
           //   h4
@@ -135,7 +140,6 @@ section.testimonials
     .col-75
       padding: 0 100px
       width: 50%
-      font-size: 16px
 
       .bx-wrapper
         .bx-viewport
@@ -154,37 +158,38 @@ section.testimonials
 
 section.feedback
   background-color: #c7c7c7
-  height: 450px
-
+  // height: 450px
+  //
   .flex
     padding: 20px
+    // box-sizing: border-box
+
 
     .form-wrap
       margin: auto 25px
+      background-color: #dcdcdc
       form
         padding: 25px
-        // max-width: 600px
-        background-color: #dcdcdc
 
         .form-group
-          // margin: 35px auto
-          // background-color: #dcdcdc
-
           .row
-            margin-bottom: 15px
             .form-control
-              color: rgb(40, 40, 40)
-
-            input
               min-width: 200px
-              height: 30px
+              min-height: 30px
+              width: 100%
+              margin-bottom: 15px
               box-sizing: border-box
               border-style: none
+              color: rgb(40, 40, 40)
+              text-indent: 10px
+              background-color: $med-blue
 
             #name, #email
               margin-right: 15px
-            .form-control
-              background-color: $med-blue
+
+            // #tel
+            //   max-width: 200px
+            // .form-control
 
             ::-webkit-input-placeholder
               /* Chrome/Opera/Safari */
@@ -199,9 +204,27 @@ section.feedback
             :-moz-placeholder
               color: white
 
+        button
+          float: right
+          margin-bottom: 25px
 
     .col-50
-      width: 350px
-      height: 350px
-      background-color: red
+      .row
+        h4
+          margin: 0 auto 15px
+          text-indent: 25px
+
+        p
+          margin:  1em
+
+
+      #map
+        max-width: 600px
+        height: 300px
+        border: 2px solid #919191
+        background:
+          image: url(/assets/img/map2.png)
+          size: caption
+          position: center
+
 @media (max-width: 770px) {}
