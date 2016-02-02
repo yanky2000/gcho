@@ -1,37 +1,34 @@
 header
   .header-top
-    // padding: 5px
-    display: flex
-    background:
-      // color: blue
+    padding: 5px
 
     .logo
-      margin-left: 15px
-
-      width: 30%
+      width: 75px
       background:
         image: url(/assets/img/logo.svg)
         repeat: no-repeat
         position: left
-        // color: yellow
+        size: contain
 
-      // size: contain
     nav
-      width: 90%
-      // padding: 0  0
-      background:
-        // color: pink
-
+      width: 100%
       ul
-        padding: 0 15% 0 20%
+        box-sizing: border-box
+        width: 100%
+        float: right
+        padding: 0 2% 0 20%
         display: flex
-        justify-content: space-between
+        justify-content: space-around
         list-style-type: none
         text-transform: uppercase
 
         li
           a
             color: #878080
+
+            &:hover,
+            &:focus
+              color: black
 
   .header-bottom
     display: flex
@@ -53,7 +50,9 @@ header
       i
         font-size: 40px
         margin-right: 10px
+        color: white
 
       tel
         font-size: 24px
-        color: #92b4db
+        span
+          color: #92b4db

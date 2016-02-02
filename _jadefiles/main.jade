@@ -2,7 +2,7 @@ section.home-banner
   .flex.space--center
     .bubble
       .content
-        h1 
+        h1
           | Чоо
           br
           |Галина
@@ -10,36 +10,36 @@ section.home-banner
           |Аркадьевна
         h2 ПЛАСТИЧЕСКИЙ ХИРУРГ, кмн
         p Профессиональная подготовка в ведущих клиниках страны , стажировки в США и Республике Корея и большой практический опыт (более 2000 операций). Автор свыше 20 публикаций по пластической хирургии
-        
+
         button Узнать подробнее
-        
+
 section.services
   .flex.space--center
     .col-50.services-list
       ul
-        li Лифтинг лица и шеи
-        li Лифтинг средней зоны лица
-        li Лифтинг верхней зоны лица
-        li Блефаропластика верхних и нижних век
-        li Блефаропластика восточных век
-        li Ринопластика
-        li Отопластика
-        li Коррекция рубцов лица и шеи
-        li Повторные операции
-        li Реконструктивные операции
-        
+        li: a(href="services/lifting_lowerface.html") Лифтинг лица и шеи
+        li: a(href="about") Лифтинг средней зоны лица
+        li: a(href="services/lifting_topface.html") Лифтинг верхней зоны лица
+        li: a(href="services/blefaroplastica.html") Блефаропластика верхних и нижних век
+        li: a(href="about") Блефаропластика восточных век
+        li: a(href="about") Ринопластика
+        li: a(href="about") Отопластика
+        li: a(href="about") Коррекция рубцов лица и шеи
+        li: a(href="about") Повторные операции
+        li: a(href="about") Реконструктивные операции
+
     .col-50.service-banner
-      
+
 section.doctor
   .flex.space--center
     .col-1
-      
+
     .doctor_msgbox
       .doctor_msgbox_content
         p.doctor-msgbox-content-text Мои многолетние усилия направлены на получение исключительного косметического результата в безопасном и комфортабельном режиме. Я и мои коллеги и помощники понимаем , что эстетическая хирургия требует больше, чем просто сертификата или лицензии. Необходим интенсивный хирургический труд, деликатная хирургическая техника, внимание к деталям.  Я фокусируюсь на эстетических и реконструктивных операциях только на лице и шее с целью совершенствования и улучшения результатов операции.
-      
+
         p Очень важно, чтобы реальные цели и ожидания определились до операции.
-        
+
         .doctor_msgbox_content_signature-box
           h4 Чоо Галина Аркадьевна
           p кмн, врач высшей категории
@@ -57,78 +57,54 @@ section.testimonials
         li Буду теперь делать только у Вас!!!! alias culpa quo reiciendis explicabo nemo voluptatem commodi aliquam esse, illo eligendi aut nesciunt et. Consectetur.
           br
           cite.push-right - Зоя К.
-      
+
     .col-1
       button еще отзывы...
-  
+
 section.feedback
   .flex.space--around
     .form-wrap.space--center
-    
+
       //thankyou_message**
       #thankyou_message(style='display:none;')
         h5 Ваше сообщение отправлено! Мы свяжемся с Вами в самое ближайщее время!
-      
+
       form#gform.pure-form.pure-form-stacked(method='POST', action='https://script.google.com/macros/s/AKfycbzk5fhlhYR0nIG9mEMjWeldvqkH4tMJo3IRNsUhhzbOelteRcmQ/exec')
-      
+
         .form-group
           .row
             label(for='name')
             input#name.form-control(name='name', placeholder='*Имя')
-          
+
             label(for='tel')
             input#tel.form-control(name='phoneNo', placeholder='Телефон')
-          
+
           .row
             label(for='email')
             input#email.form-control(name='email', type='email', value='', required='', placeholder='*Эл.почта')
             span#email-invalid(style='visibility:hidden')
               | Ваш адрес эл.почты
-          
+
           .row
             label(for='message')
             textarea#message.form-control(name='message', rows='5', placeholder='*Ваш вопрос / сообщение')
-          
+
         button.btn.btn-default(type='submit') Отправить
-      
-      
-      
+
+
     .col-50
       .row
         h4 Очные консультации
-          
+
       #map
-      
+
       .row
-        p 
+        p
           | Клиника "Союз"
           br
           |+7(499) 995-12-99
           br
           |Москва, м.Сокольники ул.Матросская Тишина, д.14а
-      
-        //- p 
-        //- p +7(499) 995-12-99
-        //- p Москва, м.Сокольники ул.Матросская Тишина, д.14а
-        
-      //- script
-      //-   function initMap() {
-      //-     var mapDiv = document.getElementById('map');
-      //-     var map = new google.maps.Map(mapDiv, {center: {lat: 44.540, lng: -78.546},zoom: 8});
-      //- }
-      //- script(src='https://maps.googleapis.com/maps/api/js?callback=initMap', async='', defer='')
-      //- 
-      
-      //working google maps
-//- script.
-//-   function initMap() {
-//-   var mapDiv = document.getElementById('map');
-//-   var map = new google.maps.Map(mapDiv, {
-//-   center: {lat: 44.540, lng: -78.546},
-//-   zoom: 8
-//-   });
-//-   }
-//- script(src='https://maps.googleapis.com/maps/api/js?callback=initMap', async='', defer='')
 
 
 //Yandex Maps***

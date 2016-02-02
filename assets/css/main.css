@@ -503,32 +503,34 @@ a {
     color: #40a6ff; }
 
 header .header-top {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  padding: 5px; }
   header .header-top .logo {
-    margin-left: 15px;
-    width: 30%;
+    width: 75px;
     background-image: url(/assets/img/logo.svg);
     background-repeat: no-repeat;
-    background-position: left; }
+    background-position: left;
+    background-size: contain; }
   header .header-top nav {
-    width: 90%; }
+    width: 100%; }
     header .header-top nav ul {
-      padding: 0 15% 0 20%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 100%;
+      float: right;
+      padding: 0 2% 0 20%;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
       list-style-type: none;
       text-transform: uppercase; }
       header .header-top nav ul li a {
         color: #878080; }
+        header .header-top nav ul li a:hover, header .header-top nav ul li a:focus {
+          color: black; }
 
 header .header-bottom {
   display: -webkit-box;
@@ -554,23 +556,55 @@ header .header-bottom {
             align-items: center; }
     header .header-bottom .header-tel i {
       font-size: 40px;
-      margin-right: 10px; }
+      margin-right: 10px;
+      color: white; }
     header .header-bottom .header-tel tel {
-      font-size: 24px;
-      color: #92b4db; }
+      font-size: 24px; }
+      header .header-bottom .header-tel tel span {
+        color: #92b4db; }
 
 footer .flex {
-  padding: 25px 20px 50px 20px;
-  color: black;
+  padding: 20px;
+  color: #121212;
   background-color: #525252; }
-  footer .flex .footer-title {
-    border-bottom: 2px solid #323232; }
-  footer .flex .col-50 .col-1 ul {
-    list-style-type: none;
-    padding-left: 20px;
-    font-size: 16px; }
-  footer .flex .col-1 {
-    font-size: 28px; }
+  footer .flex .links {
+    margin-left: 5%; }
+    footer .flex .links .footer-links_title {
+      border-bottom: 2px solid #323232; }
+      footer .flex .links .footer-links_title h3 {
+        margin: 5px 5% 2px 5%;
+        font-size: 24px;
+        color: #121212; }
+        footer .flex .links .footer-links_title h3 span {
+          font-size: 16px; }
+    footer .flex .links .footer-links_list {
+      margin-left: 5%; }
+      footer .flex .links .footer-links_list ul {
+        padding: 0 !important;
+        list-style-type: none;
+        font-size: 16px;
+        line-height: 1.7em; }
+        footer .flex .links .footer-links_list ul a {
+          color: #121212; }
+          footer .flex .links .footer-links_list ul a:hover, footer .flex .links .footer-links_list ul a:focus {
+            color: #cccccc; }
+  footer .flex .footer-contacts {
+    margin: 0 5% 0 200px; }
+    footer .flex .footer-contacts .footer-contacts_title {
+      text-align: right;
+      border-bottom: 2px solid #323232; }
+      footer .flex .footer-contacts .footer-contacts_title h3 {
+        margin: 5px 5% 2px 5%;
+        font-size: 24px;
+        color: #121212; }
+    footer .flex .footer-contacts .footer-contacts_means {
+      margin: 0 5% 0 auto;
+      text-align: right;
+      font-size: 20px;
+      color: #121212; }
+
+* {
+  color: #1d1d1d; }
 
 section.home-banner .flex {
   padding: 5px 25px;
@@ -636,8 +670,11 @@ section.services {
       padding-right: 30px;
       line-height: 2.2em;
       list-style-type: none;
-      text-align: right;
-      color: #8e8b8b; }
+      text-align: right; }
+      section.services .services-list ul a {
+        color: #6a6a6a; }
+        section.services .services-list ul a:hover, section.services .services-list ul a:focus {
+          color: black; }
   section.services .service-banner {
     margin: 40px 0;
     background-image: url(/assets/img/look.jpg);
@@ -645,6 +682,7 @@ section.services {
     background-repeat: no-repeat; }
 
 section.doctor {
+  position: relative;
   background-image: url(/assets/img/moscow2.jpg);
   background-size: 100%;
   background-position: 0 -140px;
@@ -668,6 +706,7 @@ section.doctor {
       padding: 20px 40px;
       -webkit-border-radius: 5px 40px 40px 5px;
               border-radius: 5px 40px 40px 5px;
+      color: #1d1d1d;
       background-color: rgba(255, 255, 255, 0.7); }
       section.doctor .doctor_msgbox .doctor_msgbox_content .doctor_msgbox_content_signature-box {
         text-align: right;
