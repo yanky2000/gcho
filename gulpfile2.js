@@ -5,7 +5,7 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
 //custom for neat
-//var neat        = require('node-neat'), includePaths;
+var neat        = require('node-neat'), includePaths;
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -45,7 +45,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 gulp.task('sass', function () {
     return gulp.src('assets/css/*.scss')//changed main.scss to *.scss
         .pipe(sass({
-            includePaths: ['css'],//.concat(neat),//custom added concat('neat')
+            includePaths: ['css'].concat(neat),//custom added concat('neat')
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -77,7 +77,7 @@ gulp.task('jade', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', 'services/*','testing/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', 'services/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/**/*.jade', ['jade']);
 });
 
